@@ -1,4 +1,4 @@
-CREATE TABLE worker_service (
+CREATE TABLE worker(
 id BIGINT NOT NULL AUTO_INCREMENT, 
 daily_income DECIMAL(65,2) NOT NULL, 
 name VARCHAR(255) NOT NULL, 

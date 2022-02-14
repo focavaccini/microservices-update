@@ -20,14 +20,18 @@ public class WorkerResource {
 	private WorkerService service;
 	
 	@GetMapping
-	public ResponseEntity<List<Worker>>findAll(){
+	public ResponseEntity<List<Worker>> findAll(){
+		
 		List<Worker> list = service.findAll();
-		return ResponseEntity.ok().body(list);
+		
+		return ResponseEntity.
+				ok(list);
 	}
 	
 	@GetMapping(value = "/{id}")
-	public ResponseEntity<Worker> findById(@PathVariable("id") Long id) {
+	ResponseEntity<Worker> findById(@PathVariable Long id){
+		
 		Worker obj = service.findById(id);
-		return ResponseEntity.ok().body(obj);
+		return ResponseEntity.ok(obj);
 	}
 }
