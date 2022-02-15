@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import com.microservices.payrollservice.response.Worker;
 
 @Component
-@FeignClient(name = "worker-service", url = "localhost:8000", path = "/workers")
+@FeignClient(name = "worker-service", path = "/workers")
 public interface WorkerFeignClient {
 	
 
