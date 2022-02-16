@@ -9,9 +9,17 @@ eureka:
 spring:
   application:
     name: payroll-service
+  jackson:
+    default-property-inclusion: NON_NULL
+    serialization:
+      fail-on-empty-beans: false
 management:
   endpoints:
     web:
       exposure:
         include:
         - '*'
+springdoc:
+  show-actuator: true
+  api-docs:
+    path: payroll-service/v3/api-docs

@@ -16,8 +16,14 @@ spring:
       - id: worker-service
         uri: lb://worker-service
         predicates:
-        - Path=/workers/**
+        - Path=/worker-service/**
       - id: payroll-service
         uri: lb://payroll-service
         predicates:
-        - Path=/payments/**
+        - Path=/payroll-service/**
+      - id: openapi
+        uri: lb://api-gateway
+        predicates:
+        - Path=/v3/api-docs/**
+        filters:
+        - RewritePath=/v3/api-docs/(?<path>.*), /$\{path}/v3/api-docs
