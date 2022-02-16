@@ -27,6 +27,13 @@ spring:
     - worker_service
     user: root
     password: 1234
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - '*'
     #url: jdbc:h2:mem:testdb
     #username: sa
     #password:

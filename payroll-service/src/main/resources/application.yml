@@ -9,3 +9,14 @@ eureka:
 spring:
   application:
     name: payroll-service
+resilience4j:
+  retry:
+    instances:
+      payment:
+        max-attempts: 5
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - '*'
