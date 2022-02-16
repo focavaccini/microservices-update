@@ -11,7 +11,7 @@ import io.swagger.v3.oas.models.info.License;
 @OpenAPIDefinition(info = 
 @Info(title = "Worker Service API", 
 	version = "version 1.0", 
-	description = "Documentation of Payroll Service API")
+	description = "Documentation of Worker Service API")
 )
 public class OpenApiConfiguration {
 	
