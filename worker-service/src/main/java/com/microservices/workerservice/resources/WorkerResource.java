@@ -2,8 +2,6 @@ package com.microservices.workerservice.resources;
 
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,12 +16,10 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
-@RequestMapping("/workers")
+@RequestMapping("/worker-service")
 @Tag(name = "Worker endpoint")
 public class WorkerResource {
-	
-private static Logger logger = LoggerFactory.getLogger(WorkerResource.class);
-	
+
 	@Autowired
 	private WorkerService service;
 	
@@ -37,7 +33,6 @@ private static Logger logger = LoggerFactory.getLogger(WorkerResource.class);
 	@GetMapping(value = "/{id}")
 	@Operation(summary = "Find worker by id")
 	ResponseEntity<Worker> findById(@PathVariable Long id){
-		logger.info("Request to worker id");
 		Worker obj = service.findById(id);
 		return ResponseEntity.ok(obj);
 	}

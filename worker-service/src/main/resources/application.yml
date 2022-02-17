@@ -9,6 +9,11 @@ eureka:
 spring:
   application:
     name: worker-service
+  config:
+    import:
+    - optional:configserver:http://localhost:8888
+  profiles:
+    active: test
   jackson:
     default-property-inclusion: NON_NULL
     serialization:

@@ -15,7 +15,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 
 @Tag(name = "Payroll endpoint")
 @RestController
-@RequestMapping("/payments")
+@RequestMapping("/payroll-service")
 public class PaymentResource {
 	
 
