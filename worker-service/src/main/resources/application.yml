@@ -41,8 +41,7 @@ management:
   endpoints:
     web:
       exposure:
-        include:
-        - '*'
+        include: '*'
 springdoc:
   show-actuator: true
   api-docs:

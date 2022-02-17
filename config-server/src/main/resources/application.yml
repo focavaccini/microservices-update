@@ -9,3 +9,5 @@ spring:
         git:
           default-label: main
           uri: https://github.com/focavaccini/microservices-update-config-server
+          username: ${GITHUB_USER}
+          password: ${GITHUB_PASS}
