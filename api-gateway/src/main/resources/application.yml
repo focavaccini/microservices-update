@@ -25,6 +25,10 @@ spring:
         uri: lb://user-service
         predicates:
         - Path=/user-service/**
+      - id: oauth-service
+        uri: lb://oauth-service
+        predicates:
+        - Path=/oauth-service/**
       - id: openapi
         uri: lb://api-gateway
         predicates:
